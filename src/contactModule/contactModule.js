@@ -11,9 +11,11 @@ const ContactModule = () => {
     //Display hooks for user feedback
     const [display, setDisplay] = useState('');
     const [disErr, setDisErr] = useState(false);
+    const [sending, setSending] = useState(false);
 
     const handleSubmit = () => {
-        if (name != '' && email != '' && msg != '') {
+        setSending(true);
+        if (name !== '' && email !== '' && msg !== '') {
             const postInfo = {
                 name: name,
                 email: email,
@@ -23,13 +25,15 @@ const ContactModule = () => {
     
             axios.post('send', postInfo)
             .then (response => {
-                if (response.status == 201) {
+                if (response.status === 201) {
                     // For displaying feedback to user
+                    setSending(false);
                     setDisErr(false);
                     setDisplay('Email Sent!')
                 }
             })
             .catch (err => {
+                setSending(false);
                 console.log('Email was not sent', err)
                 // User feedback
                 setDisplay('Email unable to be sent');
@@ -37,6 +41,7 @@ const ContactModule = () => {
             });
         } else {
             // User feedback
+            setSending(false);
             setDisplay('Please enter all the required fields *');
             setDisErr(true);
         }
@@ -60,6 +65,11 @@ const ContactModule = () => {
 
             <p style = {{color: !disErr ? 'greenyellow' : 'red'}}
                 className = 'display-feedback'>{display}</p>
+            <p className = 'sending-text'>
+                {
+                    sending ? 'sending ...' : ''
+                }
+            </p>
 
         </div>
     )

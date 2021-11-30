@@ -1,4 +1,4 @@
-name: Unit Testing, SonarCloud Analysis & Docker Hub Image Push
+name: Unit Testing, SonarCloud Analysis, Docker Hub Image Push & ECS Deployment
 
 on:
   push:

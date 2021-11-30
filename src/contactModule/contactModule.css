@@ -60,3 +60,9 @@
     color: greenyellow;
     text-align: center;
 }
+
+.sending-text {
+    text-align: center;
+    font-size: 18px;
+    color: orange;
+}

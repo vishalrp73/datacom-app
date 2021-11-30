@@ -6,7 +6,7 @@ import search_icon from '../img/search-icon.png';
 const Header = () => {
     return (
         <div className = 'header-wrapper'>
-            <img src = {logo} className = 'dc-logo' />
+            <img src = {logo} className = 'dc-logo' alt = 'datacom' />
 
             <div className = 'menu-wrap'>
                 <h5 className = 'menu-text'>Solutions</h5>
@@ -19,7 +19,7 @@ const Header = () => {
             <div className = 'search-log-wrap'>
                 <input type = 'button' className = 'sign-btn'
                     value = 'Sign In' />
-                <img src = { search_icon } className = 'search-icon' />
+                <img src = { search_icon } className = 'search-icon' alt = 'search' />
             </div>
         </div>
     )

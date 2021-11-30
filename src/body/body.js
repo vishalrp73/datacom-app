@@ -2,7 +2,7 @@ import './body.css';
 import touch_img from '../img/dc-img.jpeg';
 import ContactModule from '../contactModule/contactModule';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Body = () => {
 
@@ -34,7 +34,7 @@ const Body = () => {
                     </div>
 
                     <div className = 'right-touch'>
-                        <img src = { touch_img } className = 'touch-img' />
+                        <img src = { touch_img } className = 'touch-img' alt = 'employees' />
                     </div>
 
                 </div>

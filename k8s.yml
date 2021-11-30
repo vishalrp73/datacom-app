@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: datacom
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: datacom
+  template:
+    metadata:
+      labels:
+        app: datacom
+    spec:
+      containers:
+      - name: dataaks
+        image: vishalp73/dc_app
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: datacom
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+  selector:
+    app: datacom

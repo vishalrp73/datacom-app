@@ -1,0 +1,52 @@
+.header-wrapper {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.dc-logo {
+    height: 40%;
+    margin: auto auto auto 5%;
+}
+
+.menu-wrap {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-text {
+    margin: auto;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.search-log-wrap {
+    height: 100%;
+    margin: auto 5% auto auto;
+    display: flex;
+    align-items: center;
+}
+
+.sign-btn {
+    width: 120px;
+    height: 35px;
+    border-radius: 28px;
+    border: 2px solid #0055FF;
+    background-color: #FFFFFF;
+    color: #0055FF;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Fontserrat', sans-serif;
+}
+
+.search-icon {
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+}

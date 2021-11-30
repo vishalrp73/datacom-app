@@ -17,6 +17,6 @@ jobs:
       - uses: azure/k8s-deploy@v1
         with:
           manifests: |
-            k8s.yaml
-            ingress.yaml
+            k8s.yml
+            ingress.yml
           namespace: default

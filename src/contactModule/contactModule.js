@@ -21,7 +21,7 @@ const ContactModule = () => {
                 message: msg
             }
     
-            axios.post('http://localhost:4000/send', postInfo)
+            axios.post('send', postInfo)
             .then (response => {
                 if (response.status == 201) {
                     // For displaying feedback to user
